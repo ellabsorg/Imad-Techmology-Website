@@ -1,11 +1,10 @@
 import React from "react";
-import "./HeroSection.css"
+import "./HeroSection.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { faGraduationCap as graduationCapIcon } from "@fortawesome/free-solid-svg-icons";
 import { faBox as boxIcon } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarCheck as scheduleIcon } from "@fortawesome/free-solid-svg-icons";
-
 
 function HeroSection() {
   return (

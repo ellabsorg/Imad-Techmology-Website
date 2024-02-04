@@ -1,0 +1,50 @@
+/* .HeroSectionWrapper {
+  background-color: black;
+  width: 100vw;
+  height: 70px;
+} */
+.HeroSection {
+  position: relative;
+  background-image: url("../../Assets/Video-capsules-vertes-et-bleues.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100%;
+  color: white;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.HeroSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-repeat: inherit;
+  background-size: inherit;
+  filter: blur(10px);
+}
+.HeroSectionTitle {
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+  font-family: Roboto;
+  z-index: 1;
+  padding-bottom: 10PX;
+}
+.HeroSectionDescription {
+  max-width: 900px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Roboto;
+  line-height: 30px;
+  z-index: 1;
+  text-align: center;
+}
