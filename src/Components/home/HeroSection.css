@@ -1,0 +1,70 @@
+.hero-section-wrapper {
+  background-color: black;
+  width: 100vw;
+  height: 500px;
+}
+.hero-section {
+  position: relative;
+  background-image: url("../../Assets/Video-capsules-vertes-et-bleues.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100%;
+  color: white;
+}
+
+.grey-square-holder {
+  height: 100%;
+  max-width: 1368px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.grey-square {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  background-color: rgba(143, 143, 143, 0.6);
+  border-radius: 15% 15% 0% 15%;
+  font-size: 80px;
+  line-height: 1;
+  margin-left: 200px;
+}
+.grey-square-title {
+  font-family: Roboto;
+  font-weight: 600;
+  width: 100px;
+  position: absolute;
+  top: -40px;
+  left: -30px;
+}
+.three-buttons {
+  width: 100%;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-top: -50px;
+}
+.three-buttons-item {
+  font-size: 25px;
+  border: 5px solid #09c699;
+  padding: 25px 55px;
+  border-radius: 50px;
+  background-color: black;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.three-buttons-item-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  gap: 20px;
+}
+.three-buttons-item:hover {
+  background-color: #09c699;
+}

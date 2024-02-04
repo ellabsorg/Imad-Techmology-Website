@@ -1,0 +1,99 @@
+.Footer-Wrapper {
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Footer-White-Section {
+  display: flex;
+  gap: 35px;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+.Footer-Element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+  gap: 9px;
+}
+.Footer-Element:hover {
+  color: rgb(0, 186, 121);
+}
+.Footer-Element .FaIcon {
+  height: 25px;
+}
+
+.Footer-black-Section-wrapper {
+  width: 100vw;
+  height: auto;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.Footer-black-Section {
+  width: 1300px;
+  max-width: 1600px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  color: white;
+}
+.footer-black-upper-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.footer-slogon,
+.footer-contact-us-button-section {
+  width: 50%;
+}
+.footer-slogon {
+  text-transform: uppercase;
+}
+.footer-contact-us-button-section {
+  display: flex;
+  justify-content: center;
+}
+.footer-button {
+  border: 3px solid rgb(0, 186, 121);
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.footer-button:hover {
+  background-color: rgb(0, 186, 121);
+}
+
+.footer-black-lower-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.lower-section-item {
+  width: 30%;
+}
+.footer-logo {
+  text-decoration: none;
+}
+.footer-logo {
+  color: rgb(0, 88, 195);
+  font-family: Ghoust Outline;
+  font-size: 30px;
+  font-weight: 100;
+}

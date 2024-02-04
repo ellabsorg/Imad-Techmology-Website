@@ -1,0 +1,85 @@
+.feedni-description-container {
+  margin-top: 120px;
+  height: 600px;
+  width: 100vw;
+}
+.feedni-description {
+  width: 1368px;
+  max-width: 1368px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+.feedni-left-section-wrapper2 {
+  width: 37%;
+  height: 80%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+
+.feedni-right-section-wrapper {
+  width: 40%;
+  height: 100%;
+}
+.feedni-right-section {
+  width: 90%;
+  height: 100%;
+  background-image: linear-gradient(90deg, #09c699, #186dd3);
+  padding: 10px;
+  text-align: left;
+  color: white;
+}
+.feedni-right-section-text h1 {
+  font-family: Bakemono Stereo Trial;
+  margin: 0%;
+  font-weight: 900;
+  padding: 10px 0px;
+}
+.feedni-right-section-text p {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Kanit", Sans-serif;
+  line-height: 1.6;
+  font-weight: 600;
+}
+/* ================ SWIPER IMAGE ================== */
+.feedni-swiper-holder {
+  /* background-color: red; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+.feedni-swiper-holder img {
+  width: 95%;
+  padding: 10px;
+  cursor: pointer;
+}
+/* =================================================== */
+
+.feedni-left-section-wrapper {
+  background: linear-gradient(90deg, #09c699, #186dd3);
+  background-clip: text;
+}
+.feedni-big-title {
+  margin: 0%;
+  padding: 0%;
+  font-size: 120px;
+  font-family: Bakemono Stereo Trial;
+  color: transparent;
+}
+.feedni-small-title {
+  font-size: 20px;
+  margin: 0%;
+  padding: 0%;
+}

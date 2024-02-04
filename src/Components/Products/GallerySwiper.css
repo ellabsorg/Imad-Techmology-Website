@@ -1,0 +1,56 @@
+.Gallery-Swiper-Component {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  z-index: 99;
+}
+.Gallery-Swiper-Container {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.Gallery-Swiper-Container img {
+  width: 100%;
+  height: 100%;
+  max-width: 1368px;
+  object-fit: cover;
+  position: relative;
+  background-color: red;
+}
+
+.Gallery-Swiper-Container .Left-Arrow,
+.Gallery-Swiper-Container .Right-Arrow {
+  width: 40px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+}
+.Xmark {
+  width: 40px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 3%;
+  right: 3%;
+}
+
+
+
+
+
+
+
+
+
+
