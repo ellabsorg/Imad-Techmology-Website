@@ -19,20 +19,38 @@
 /* =========================================== */
 
 .dropdown-title {
-  /* background-color: rgb(19, 53, 42); */
   padding: 20px 25px;
   color: rgb(0, 0, 0);
   font-size: 16px;
+  display: flex;
+  gap: 7px;
 }
 
 .drop-down-items ul {
   margin: 0%;
   padding: 0%;
   list-style-type: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 200px;
 }
 .drop-down-items li {
-  color: white;
-  padding: 10px 50px;
+  width: 100%;
+  height: 100%;
+  color: black;
+  padding: 13px 25px;
+  text-align: left;
+  /* width: 200px; */
+}
+.drop-down-items li:hover {
+  color: rgb(0, 118, 215);
 }
 
 .dropdown-Element {
@@ -42,7 +60,7 @@
 }
 
 .drop-down-items {
-  background-color: rgb(123, 89, 50);
+  /* background-color: rgb(173, 115, 48); */
   position: absolute;
   top: 100%;
   visibility: hidden;
@@ -58,9 +76,16 @@
   visibility: visible;
   opacity: 1;
   z-index: 2;
-  background-color: rebeccapurple;
+  background-color: rgb(255, 255, 255);
+  padding: 0%;
+  margin: 0%;
+  width: 100%;
 }
-.dropdown-Element:hover {
-  background-color: rebeccapurple;
-  color: rgb(99, 59, 59);
+.dropdown-Element:hover .dropdown-title {
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
+
+.Dropdown-Link {
+  text-decoration: none;
 }

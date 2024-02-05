@@ -1,94 +1,39 @@
 import React from "react";
 import "./DropDown.css";
-
+import { dropdownData } from "./DropdownData";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 function DropDown() {
+  console.log(
+    "dropdownData = ",
+    dropdownData.dropdownElements[0].items[0].label
+  );
   return (
     <div className="dropdown-component">
       <div className="dropdown-container">
         <div className="dropdown-wrapper">
-
-            
-          <div className="dropdown-Element">
-            <div className="dropdown-title">Kids</div>
-            <div className="drop-down-items">
-              <ul>
-                <li>item1</li>
-                <li>item2</li>
-                <li>item3</li>
-              </ul>
+          {/* =============================== ELEMENT ===================================== */}
+          {dropdownData.dropdownElements.map((element, index) => (
+            <div key={index} className="dropdown-Element">
+              <div className="dropdown-title">
+                {element.items.length > 0 && (
+                  <FontAwesomeIcon icon={faCaretDown} />
+                )}
+                {element.title}
+              </div>
+              <div className="drop-down-items">
+                <ul>
+                  {element.items.map((item, index) => (
+                    <Link key={index} className="Dropdown-Link" to={item.url}>
+                      <li>{item.label}</li>
+                    </Link>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
-
-          <div className="dropdown-Element">
-            <div className="dropdown-title">Robotique & Electronique</div>
-            <div className="drop-down-items">
-              <ul>
-                <li>item1</li>
-                <li>item2</li>
-                <li>item3</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="dropdown-Element">
-            <div className="dropdown-title">Programmation</div>
-            <div className="drop-down-items">
-              <ul>
-                <li>item1</li>
-                <li>item2</li>
-                <li>item3</li>
-              </ul>
-            </div>
-          </div> 
-
-          <div className="dropdown-Element">
-            <div className="dropdown-title">Developpement Software</div>
-            <div className="drop-down-items">
-              <ul>
-                <li>item1</li>
-                <li>item2</li>
-                <li>item3</li>
-              </ul>
-            </div>
-          </div> 
-
-          <div className="dropdown-Element">
-            <div className="dropdown-title">Design</div>
-            <div className="drop-down-items">
-              <ul>
-                <li>item1</li>
-                <li>item2</li>
-                <li>item3</li>
-              </ul>
-            </div>
-          </div> 
-
-
-
-          <div className="dropdown-Element">
-            <div className="dropdown-title">Soft Skills</div>
-            <div className="drop-down-items">
-              <ul>
-                <li>item1</li>
-                <li>item2</li>
-                <li>item3</li>
-              </ul>
-            </div>
-          </div> 
-
-
-          <div className="dropdown-Element">
-            <div className="dropdown-title">Training of Trainers</div>
-            <div className="drop-down-items">
-              <ul>
-                <li>item1</li>
-                <li>item2</li>
-                <li>item3</li>
-              </ul>
-            </div>
-          </div> 
-
-
+          ))}
+          {/* ============================================================================== */}
         </div>
       </div>
     </div>
@@ -96,12 +41,3 @@ function DropDown() {
 }
 
 export default DropDown;
-
-{
-  /* <ul>Robotique et electronique</ul>
-          <ul>Programmation</ul>
-          <ul>Developpement Software</ul>
-          <ul>Design</ul>
-          <ul>Soft Skills</ul>
-          <ul>Training of Trainers</ul> */
-}

@@ -11,12 +11,7 @@ function Formations() {
     <div>
       <Navbar />
       <HeroSection description={description} title={"Nos Formations"} />
-      <br />
-      <br /> <br />
-      <br />
       <DropDown />
-      <br /> <br />
-      <br />
       <Footer />
     </div>
   );
