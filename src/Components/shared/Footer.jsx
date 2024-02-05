@@ -9,7 +9,7 @@ function Footer() {
   const navbarElements = [
     { name: "Acceuil", path: "/acceuil" },
     { name: "A propos", path: "/a-propos" },
-    { name: "Formation", path: "/formatiom" },
+    { name: "Formation", path: "/formations" },
     { name: "Produits", path: "/produits" },
     { name: "Evenements", path: "/evenements" },
     { name: "Contact", path: "/contact" },

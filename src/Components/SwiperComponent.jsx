@@ -6,7 +6,6 @@ import HuaweiLogo from "../Assets/huawei-logo.png";
 import USTHBLogo from "../Assets/USTHB.png";
 import TropicoLogo from "../Assets/tropico.png";
 import LondonShopLogo from "../Assets/LondonShop.png";
-import PlayBoyLogo from "../Assets/PlayBoyLogo.png";
 
 // Importing Swiper
 import { Navigation } from "swiper/modules";
@@ -45,9 +44,6 @@ function SwiperComponent() {
       </SwiperSlide>
       <SwiperSlide>
         <img src={LondonShopLogo} alt="" className="PartnersSliderItem" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={PlayBoyLogo} alt="" className="PartnersSliderItem" />
       </SwiperSlide>
       <SwiperSlide>
         <img src={EllabsLogo} alt="" className="PartnersSliderItem" />

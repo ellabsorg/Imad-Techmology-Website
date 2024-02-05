@@ -1,5 +1,7 @@
 .dropdown-component {
   color: black;
+  padding-bottom: 60px;
+  z-index: 101;
 }
 .dropdown-container {
   width: 100vw;
@@ -10,11 +12,12 @@
   width: 1368px;
   background-color: white;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   font-family: Roboto;
   font-weight: 600;
   gap: 4px;
-  padding-left: 100px;
+  padding-left: 80px;
+  height: 70px;
 }
 /* =========================================== */
 
@@ -60,7 +63,6 @@
 }
 
 .drop-down-items {
-  /* background-color: rgb(173, 115, 48); */
   position: absolute;
   top: 100%;
   visibility: hidden;
