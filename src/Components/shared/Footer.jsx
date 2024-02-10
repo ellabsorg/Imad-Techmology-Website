@@ -19,8 +19,8 @@ function Footer() {
       <div className="Footer-Container">
         <div className="Footer-Wrapper">
           <div className="Footer-White-Section">
-            {navbarElements.map((element) => (
-              <Link className="Footer-Element" to={element.path}>
+            {navbarElements.map((element, index) => (
+              <Link key={index} className="Footer-Element" to={element.path}>
                 <FontAwesomeIcon
                   size="2x"
                   className="FaIcon"

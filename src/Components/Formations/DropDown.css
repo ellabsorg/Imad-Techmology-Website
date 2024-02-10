@@ -91,3 +91,7 @@
 .Dropdown-Link {
   text-decoration: none;
 }
+.element-with-link {
+  text-decoration: none;
+  color: inherit;
+}

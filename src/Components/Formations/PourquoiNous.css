@@ -30,9 +30,8 @@
   justify-content: flex-start;
   gap: 20px;
 }
-.icon-holder {
-  /* background-color: rgb(255, 0, 191); */
-}
+
+
 .title-and-description {
   display: flex;
   flex-direction: column;

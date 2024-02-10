@@ -1,0 +1,162 @@
+* {
+  color: white;
+}
+.formationDetails-container {
+  width: 100vw;
+  padding-bottom: 100px;
+}
+.formationDetails-wrapper {
+  width: 1368px;
+  max-width: 1368px;
+  margin: auto;
+}
+
+.formation-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+  gap: 50px;
+  height: auto;
+}
+
+.formation-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  width: 40%;
+  font-family: Roboto;
+  line-height: 25px;
+}
+.formation-name {
+  color: #09c699;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: Kanit, sans-serif;
+}
+.formation-description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: Kanit, sans-serif;
+}
+.formation-gallery {
+  width: 40%;
+}
+.subscripte-button {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  width: 120px;
+  height: 50px;
+  border: 3px solid #09c699;
+  background-color: black;
+  border-radius: 25px;
+  color: white;
+}
+.subscripte-button:hover {
+  background-color: #09c699;
+}
+
+.formation-goals-section {
+  text-align: left;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 100px;
+}
+.formation-goal-title h1,
+.programme-title h1,
+.detail-title h1 {
+  color: #09c699;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 32px;
+  font-family: Kanit, sans-serif;
+}
+.levels-section {
+  text-align: left;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 100px;
+}
+.niveaux-title {
+  color: #09c699;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 32px;
+  font-family: Kanit, sans-serif;
+}
+.level-name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  z-index: 99;
+}
+.level-description-item h3 {
+  color: #09c699;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: Kanit, sans-serif;
+}
+.level-description-item p,
+.level-details-item,
+.level-program-item,
+.formation-goal-item,
+.detail-item,
+.programme-item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Kanit, sans-serif;
+}
+.programme-items{
+  padding-left: 25px;
+}
+.programme-item {
+  font-weight: 700;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 16px;
+  cursor: pointer;
+  text-decoration: none !important;
+  /* color: red; */
+}
+
+.level-details-items h3 {
+  color: #09c699;
+}
+.level-program-items h3 {
+  color: #09c699;
+}
+.programme-section,
+.details-section {
+  font-family: Kanit, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 100px;
+}
+.note {
+  padding-top: 15px;
+}
+.program-sous-items {
+  padding-top: 6px;
+  padding-bottom: 12px;
+}

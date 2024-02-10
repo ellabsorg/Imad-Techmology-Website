@@ -1,26 +1,30 @@
 import React from "react";
 import "./DropDown.css";
-import { dropdownData } from "./DropdownData";
+import { dropdownElements } from "../../constants/DropdownData";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 function DropDown() {
-  console.log(
-    "dropdownData = ",
-    dropdownData.dropdownElements[0].items[0].label
-  );
+  console.log("dropdownData = ", dropdownElements[0].items[0].label);
   return (
     <div className="dropdown-component">
       <div className="dropdown-container">
         <div className="dropdown-wrapper">
-          {/* =============================== ELEMENT ===================================== */}
-          {dropdownData.dropdownElements.map((element, index) => (
+          {/* ===============================  ===================================== */}
+          {/* ELEMENT */}
+          {dropdownElements.map((element, index) => (
             <div key={index} className="dropdown-Element">
               <div className="dropdown-title">
                 {element.items.length > 0 && (
                   <FontAwesomeIcon icon={faCaretDown} />
                 )}
-                {element.title}
+                {element.link ? (
+                  <Link className="element-with-link" to={element.link}>
+                    {element.title}
+                  </Link>
+                ) : (
+                  element.title
+                )}
               </div>
               <div className="drop-down-items">
                 <ul>

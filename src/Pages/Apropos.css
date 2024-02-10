@@ -1,0 +1,60 @@
+.Apropos-Container {
+  width: 100vw;
+  color: white;
+}
+.Apropos-Wrapper {
+  margin: auto;
+  width: 1368px;
+  max-width: 1368px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+.nos-valeurs-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+.Sous-Description {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  color: white;
+  font-size: large;
+  font-family: Roboto;
+  line-height: 1.5;
+}
+.nos-valeurs-title {
+  font-size: 40px;
+}
+.nos-valeurs-title::before {
+  content: "";
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  border-bottom: 3px solid rgb(0, 227, 189); /* You can change the color and style as needed */
+}
+
+.nos-valeurs-elemets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.nos-valeurs-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  gap: 15px;
+  color: rgb(0, 227, 189);
+}
+
+.nos-valeurs-text {
+  color: white;
+}

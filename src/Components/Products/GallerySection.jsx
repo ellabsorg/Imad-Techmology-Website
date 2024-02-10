@@ -8,7 +8,7 @@ import GalleryImage5 from "../../Assets/Photo-Mobbo-5.jpg";
 import GallerySwiper from "./GallerySwiper";
 
 function GallerySection() {
-  const [imageToPreview, setImageToPreview] = useState(GalleryImage1);
+  const [SelectedImageId, setSelectedImageId] = useState(0);
   const [isVisible, SetIsVisible] = useState(false);
   const GalleryImages = [
     GalleryImage1,
@@ -17,28 +17,19 @@ function GallerySection() {
     GalleryImage4,
     GalleryImage5,
   ];
+  // console.log(GalleryImages);
   const handleLeftArrow = () => {
-    if (GalleryImages.indexOf(imageToPreview) !== 0) {
-      console.log("imageToPreview = ", GalleryImages.indexOf(imageToPreview));
-      const IndexOfNewImage = GalleryImages.indexOf(imageToPreview) - 1;
-      setImageToPreview(GalleryImages[IndexOfNewImage]);
-      console.log("imageToPreview = ", GalleryImages.indexOf(imageToPreview));
-    }
+    setSelectedImageId((prev) => prev - 1);
   };
   const handleRightArrow = () => {
-    if (GalleryImages.indexOf(imageToPreview) < GalleryImages.length - 1) {
-      console.log("imageToPreview = ", GalleryImages.indexOf(imageToPreview));
-      const IndexOfNewImage = GalleryImages.indexOf(imageToPreview) + 1;
-      setImageToPreview(GalleryImages[IndexOfNewImage]);
-      console.log("imageToPreview = ", GalleryImages.indexOf(imageToPreview));
-    }
+    setSelectedImageId((prev) => prev + 1);
   };
   const handleExitButton = () => {
     SetIsVisible(false);
   };
   const handleImageClick = (index) => {
     SetIsVisible(true);
-    setImageToPreview(GalleryImages[index]);
+    setSelectedImageId(index);
   };
   return (
     <div className="GallerySectionComponent">
@@ -83,14 +74,16 @@ function GallerySection() {
         </div>
       </div>
       <br />
-      <GallerySwiper
-        handleLeftArrow={handleLeftArrow}
-        handleRightArrow={handleRightArrow}
-        handleExitButton={handleExitButton}
-        imageToPreview={imageToPreview}
-        isVisible={isVisible}
-        GalleryImages={GalleryImages}
-      />
+      {isVisible && (
+        <GallerySwiper
+          handleLeftArrow={handleLeftArrow}
+          handleRightArrow={handleRightArrow}
+          handleExitButton={handleExitButton}
+          imageToPreview={GalleryImages[SelectedImageId]}
+          GalleryImages={GalleryImages}
+          SelectedImageId={SelectedImageId}
+        />
+      )}
     </div>
   );
 }

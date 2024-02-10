@@ -23,8 +23,8 @@ function Navbar() {
           </div>
           <Contacts />
           <div className="navbarElementsSection">
-            {navbarElements.map((element) => (
-              <Link className="NavbarElement" to={element.path}>
+            {navbarElements.map((element, index) => (
+              <Link key={index} className="NavbarElement" to={element.path}>
                 {element.name}{" "}
               </Link>
             ))}

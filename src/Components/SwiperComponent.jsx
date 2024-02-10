@@ -24,8 +24,6 @@ function SwiperComponent() {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       }}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
     >
       <SwiperSlide>
         <img src={EllabsLogo} alt="" className="PartnersSliderItem" />

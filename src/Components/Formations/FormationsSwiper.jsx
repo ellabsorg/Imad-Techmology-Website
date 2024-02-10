@@ -22,15 +22,13 @@ function FormationsSwiper() {
       <div className="Formations-Slider-Container">
         <div className="Formations-Slider-Wrapper">
           <Swiper
-          className="Swiper"
+            className="Swiper"
             spaceBetween={115}
             slidesPerView={3}
             navigation={{
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
             }}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
           >
             <SwiperSlide className="Swiper-Slide">
               <div className="slide-img-holder">
@@ -72,10 +70,9 @@ function FormationsSwiper() {
                 <img src={Image2} alt="" className="formations-slide-item" />
               </div>
             </SwiperSlide>
-
           </Swiper>
-            <div className="swiper-button-next"></div>
-            <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
+          <div className="swiper-button-prev"></div>
         </div>
       </div>
     </div>
