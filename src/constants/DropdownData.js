@@ -4,8 +4,8 @@ export const dropdownElements = [
     title: "Kids",
     items: [
       { label: "Robotique", url: "Robotique" },
-      { label: "Programmation AI", url: "Programmation-AI" },
-      { label: "Sciences et chimie", url: "Sciences-et-chimie" },
+      { label: "Programmation AI", url: "Programmation_AI" },
+      { label: "Sciences et chimie", url: "Sciences_et_chimie" },
     ],
   },
   {
@@ -28,7 +28,7 @@ export const dropdownElements = [
   {
     id: 4,
     title: "Developpement Software",
-    items: [{ label: "Dev Web", url: "Dev-Web" }],
+    items: [{ label: "Dev Web", url: "Dev_Web" }],
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ export const dropdownElements = [
   {
     id: 6,
     title: "Soft Skills",
-    items: [{ label: "Digital Marketing", url: "Digital-Marketing" }],
+    items: [{ label: "Digital Marketing", url: "Digital_Marketing" }],
   },
   {
     id: 7,
@@ -48,5 +48,3 @@ export const dropdownElements = [
     items: [],
   },
 ];
-
-
