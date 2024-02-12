@@ -836,15 +836,6 @@ const mydata = [
       {
         id: 12,
         description: "Design et conception de la publicité:",
-        subDescription: [
-          { id: 1, description: "Infographie et graphisme" },
-          { id: 2, description: "Charte graphique et visuel" },
-          {
-            id: 3,
-            description:
-              "Contenue visuel et sa caractérisation avec différentes reseaux sociaux",
-          },
-        ],
       },
     ],
     details: [

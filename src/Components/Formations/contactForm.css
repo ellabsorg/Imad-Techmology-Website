@@ -1,0 +1,31 @@
+.contact-form-container {
+  width: max-content;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact-form-wrapper {
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.name-lastname {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.submit-button {
+  background-color: #09cd99;
+  font-family: Kanit, sams-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  width: 120px;
+  height: 45px;
+}
+

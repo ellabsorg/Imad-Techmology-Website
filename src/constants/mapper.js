@@ -7,7 +7,6 @@ export const mapper = {
   PCB: 5,
   c: 6,
   POO: 7,
-  Dev_web: 8,
-  Design: 9,
-  Digital_Marketing: 10,
+  Dev_Web: 8,
+  Digital_Marketing: 9,
 };

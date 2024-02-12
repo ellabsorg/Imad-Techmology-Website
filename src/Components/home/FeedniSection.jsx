@@ -1,6 +1,13 @@
 import React from "react";
-import SwiperPicture from "../../Assets/SwiperPicture.png";
+// import SwiperPicture from "../../Assets/SwiperPicture.png";
 import "./FeedniSection.css";
+// Importing Swiper
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import SwiperCore from "swiper";
+SwiperCore.use([Navigation]);
 
 function FeedniSection() {
   return (
@@ -25,7 +32,50 @@ function FeedniSection() {
               </p>
               {/* ================ SWIPER IMAGE ================== */}
               <div className="feedni-swiper-holder">
-                <img src={SwiperPicture} alt="" />
+                <Swiper
+                  spaceBetween={2}
+                  slidesPerView={1}
+                  navigation={{
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  }}
+                >
+                  <SwiperSlide>
+                    <iframe
+                      width="500"
+                      height="315"
+                      src="https://www.youtube.com/embed/qPPEb9YAJco?si=c69a7Ka-1P8u0CEv"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <iframe
+                      width="460"
+                      height="315"
+                      src="https://www.youtube.com/embed/qPPEb9YAJco?si=c69a7Ka-1P8u0CEv"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <iframe
+                      width="460"
+                      height="315"
+                      src="https://www.youtube.com/embed/qPPEb9YAJco?si=c69a7Ka-1P8u0CEv"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </SwiperSlide>
+                  <div className="swiper-button-next"></div>
+                  <div className="swiper-button-prev"></div>
+                </Swiper>
               </div>
               {/* ================ SWIPER IMAGE ================== */}
             </div>

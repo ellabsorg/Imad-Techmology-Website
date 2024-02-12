@@ -358,5 +358,518 @@ const FORMATION_DETAILS = [
       },
     ],
   },
+  // ============================= IOT =======================================
+  {
+    id: 4,
+    multiple: false,
+    title: "Formation Internet Of Things",
+    description:
+      "Imaginez un monde de “choses” connectées (appareils, véhicules, bâtiments) capables de parler à un réseau, à l’internet, à elles-mêmes et de prendre des mesures ? Bienvenue dans l’espace IOT (Internet of Things), une nouvelle révolution, qui comptera des milliards d’objets installés et connectés de manière autonome. Cette formation va vous permettre de créer des solutions IOT, de zéro à la mise en marche, tout en exploitant la fameuse carte ESP32, un microcontrôleur peu coûteux et extrêmement polyvalent avec WiFi et Bluetooth intégrés.",
+
+    goals: [
+      {
+        id: 1,
+        goal: "Découvrir la carte ESP32 et apprendre à travailler avec des capteurs, des actionneurs, etc.",
+      },
+      {
+        id: 2,
+        goal: "Apprendre à coder l’ESP 32 en utilisant l’IDE Arduino à partir des bases.",
+      },
+      {
+        id: 3,
+        goal: "Apprendre à se connecter aux plateformes IOT, à conserver les données, à programmer des déclencheurs, etc.",
+      },
+      {
+        id: 4,
+        goal: "Réaliser des différents Projets IOT.",
+      },
+    ],
+    programme: [
+      {
+        id: 1,
+        description: "Séance 1",
+        items: [
+          { id: 1, description: "Introduction, définition et exemple IOT" },
+          { id: 2, description: "Présentation de l’ESP32 ?" },
+          { id: 3, description: "ESP32 Moduless" },
+          { id: 4, description: "Programmation de l’ESP32" },
+        ],
+      },
+      {
+        id: 2,
+        description: "Séance 2",
+        items: [
+          { id: 1, description: "Premiers pas avec l’IDE Arduino" },
+          { id: 2, description: "ESP32 for Arduino IDE" },
+          {
+            id: 3,
+            description: "Ajouter une entrée de gestionnaire de cartes",
+          },
+          { id: 4, description: "Branchement de l’expérience" },
+          { id: 5, description: "Hello World – Clignotement pour ESP32" },
+          { id: 6, description: "Téléchargement du programme" },
+        ],
+      },
+      {
+        id: 3,
+        description: "Séance 3",
+        items: [
+          { id: 1, description: "Utilisation du Wi-Fi" },
+          { id: 2, description: "Wi-Fi sur ESP32" },
+          { id: 3, description: "WiFi Modes" },
+          { id: 4, description: "Station (STA) Mode" },
+          { id: 5, description: "Soft Access Point (AP) Mode" },
+          {
+            id: 6,
+            description: "WiFi Scanner",
+            subtitles: [
+              "Trouver les exemples de programmes",
+              "Charger WiFiScan",
+            ],
+          },
+          { id: 7, description: "Point d’accès Wi-Fi" },
+          { id: 8, description: "Serveur Wi-Fi simple" },
+        ],
+      },
+      {
+        id: 4,
+        description: "Séance 4",
+        items: [
+          { id: 1, description: "Utilisation du Bluetooth" },
+          {
+            id: 2,
+            description: "Bluetooth et BLE sur ESP32",
+            subtitles: [
+              "Bluetooth classique 4.2",
+              "Bluetooth à faible consommation d’énergie",
+            ],
+          },
+          { id: 3, description: "Série à série BT" },
+          { id: 4, description: "Temps simple" },
+          { id: 5, description: "Capteur à effet Hall" },
+        ],
+      },
+    ],
+    details: [
+      { id: 1, description: "Durée 1 mois /  4 semaines" },
+      { id: 2, description: "3 heures (séance) par semaine " },
+      { id: 3, description: "Prix 6000 DA" },
+      {
+        id: 4,
+        description:
+          "Note : Le paiement est effectué le jour de la première session",
+        type: "note",
+      },
+    ],
+  },
+  // ============================= PCB =======================================
+  {
+    id: 4,
+    multiple: false,
+    title: "Formation Circuits imprimés",
+    description:
+      "Vous souhaitez créer et concevoir vos propres circuits imprimés ? Dans cette formation, vous apprendrez toutes les informations essentielles sur les différents composants électroniques et leur fonctionnement, comment concevoir un circuit imprimé (PCB): monocouche et multicouche, comment créer différents types de PCB et vous allez réaliser le projet final qui consiste à construire votre propre PCB.",
+
+    goals: [
+      {
+        id: 1,
+        goal: "Découvrez les différents composants électroniques et leur fonctionnement.",
+      },
+      {
+        id: 2,
+        goal: "Concevoir différents circuits imprimés monocouches et multicouches.",
+      },
+      {
+        id: 3,
+        goal: "Apprenez comment créer divers types de cartes de circuits imprimés.",
+      },
+      {
+        id: 4,
+        goal: "Construire votre propre PCB à partir de zéro.",
+      },
+    ],
+    programme: [
+      {
+        id: 1,
+        description: "Séance 1",
+        items: [
+          {
+            id: 1,
+            description: "Intro PCB: qu’est-ce que c’est, où vous les utilisez",
+          },
+          { id: 2, description: "Composants: résistance, capacité, bobine" },
+          { id: 3, description: "Filtres: passe-bas, passe-haut" },
+          { id: 4, description: "Signal Analogique" },
+          { id: 5, description: "Bases de conception" },
+          { id: 6, description: "Design LED clignotante NE555" },
+        ],
+      },
+      {
+        id: 2,
+        description: "Séance 2",
+        items: [
+          { id: 1, description: "Signal Numérique" },
+          { id: 2, description: "Microcontrôleur : explication composants" },
+          { id: 3, description: "Design circuit capteur de flamme" },
+          { id: 4, description: "Design circuit radar: ultrason + Servo" },
+          { id: 5, description: "Design circuit afficheur + RFID" },
+        ],
+      },
+      {
+        id: 3,
+        description: "Séance 3",
+        items: [
+          { id: 1, description: "PCB double couche" },
+          { id: 2, description: "Design driver moteur" },
+          { id: 3, description: "SMD" },
+          {
+            id: 4,
+            description: "Design suiveur de ligne: IR, Atmega, driver moteur",
+          },
+        ],
+      },
+      {
+        id: 4,
+        description: "Séance 4",
+        items: [{ id: 1, description: "Réalisation des PCB" }],
+      },
+    ],
+    details: [
+      { id: 1, description: "Durée 1 mois /  4 semaines" },
+      { id: 2, description: "3 heures (séance) par semaine " },
+      { id: 3, description: "Prix 7000 DA" },
+      {
+        id: 4,
+        description:
+          "Note : Le paiement est effectué le jour de la première session",
+        type: "note",
+      },
+    ],
+  },
+  // ============================= C++ =======================================
+  {
+    id: 4,
+    multiple: false,
+    title: "Formation C++",
+    description:
+      "Voulez-vous apprendre l’un des langages de programmation les plus utilisés au monde? Notre formation de C++ POO inclut tout ce que vous devez savoir pour atteindre votre objectif, des éléments de base de la programmation jusqu’à la programmation de vos propres projets complexes orientés objet.",
+
+    goals: [
+      {
+        id: 1,
+        goal: "texte.",
+      },
+    ],
+    programme: [
+      {
+        id: 1,
+        description: "Séance 1 : Introduction au langage C++",
+        items: [
+          {
+            id: 1,
+            description: "IDE et installation",
+          },
+          { id: 2, description: "Type de langage: Interpréteur, compilateur" },
+          { id: 3, description: "Les bibliothèques" },
+          { id: 4, description: "Variables" },
+          { id: 5, description: "Boucles" },
+          { id: 6, description: "Conditions" },
+        ],
+      },
+      {
+        id: 2,
+        description: "Séance 2 : Niveau de langage",
+        items: [
+          { id: 1, description: "Pointeur et adresse" },
+          { id: 2, description: "Les références" },
+          { id: 3, description: "Les tableaux" },
+          { id: 4, description: "Relation entre les pointeurs et les tableau" },
+        ],
+      },
+      {
+        id: 3,
+        description: "Séance 3 : Chaine de caractère",
+        items: [
+          { id: 1, description: "Les fonctions" },
+          { id: 2, description: "Les fonction récursive" },
+          { id: 3, description: "Variables globales et local" },
+          { id: 4, description: "Les structures" },
+          { id: 4, description: "Enumeration" },
+        ],
+      },
+      {
+        id: 4,
+        description: "Séance 4",
+      },
+    ],
+    details: [
+      { id: 1, description: "Durée 1 mois /  4 semaines" },
+      { id: 2, description: "3 heures (séance) par semaine " },
+      { id: 3, description: "Prix 6000 DA" },
+      {
+        id: 4,
+        description:
+          "Note : Le paiement est effectué le jour de la première session",
+        type: "note",
+      },
+    ],
+  },
+  // ============================= C++ =======================================
+  {
+    id: 4,
+    multiple: false,
+    title: "Formation POO",
+    description:
+      "Voulez-vous apprendre l’un des langages de programmation les plus utilisés au monde? Notre formation de C++ POO inclut tout ce que vous devez savoir pour atteindre votre objectif, des éléments de base de la programmation jusqu’à la programmation de vos propres projets complexes orientés objet.",
+
+    goals: [
+      {
+        id: 1,
+        goal: "texte.",
+      },
+    ],
+    programme: [
+      {
+        id: 1,
+        description: "Séance 1 : Introduction POO",
+        items: [
+          { id: 1, description: "Les attributes" },
+          { id: 2, description: "Les méthodes" },
+          { id: 3, description: "Les instances" },
+          { id: 4, description: "Constructeur " },
+          { id: 5, description: "Surcharges overloading" },
+          { id: 6, description: "Setter et getter" },
+          { id: 7, description: "Destructeur et contraints" },
+        ],
+      },
+      {
+        id: 2,
+        description: "Séance 2 : L'encapsulation et niveaux",
+        items: [
+          { id: 1, description: "Objet constante" },
+          { id: 2, description: "Héritage " },
+          { id: 3, description: "Surcharge overriding" },
+          { id: 4, description: "Abstraction" },
+        ],
+      },
+      {
+        id: 3,
+        description: "Séance 3 : Héritage multiple",
+        items: [
+          { id: 1, description: "Polymorphisme " },
+          { id: 2, description: "Classe amies" },
+          { id: 3, description: "Les exceptions" },
+        ],
+      },
+      {
+        id: 4,
+        description:
+          "Séance 4 : Récapitulation de POO, exercices et projet final.",
+      },
+    ],
+    details: [
+      { id: 1, description: "Durée 1 mois /  4 semaines" },
+      { id: 2, description: "3 heures (séance) par semaine " },
+      { id: 3, description: "Prix 6000 DA" },
+      {
+        id: 4,
+        description:
+          "Note : Le paiement est effectué le jour de la première session",
+        type: "note",
+      },
+    ],
+  },
+  // ============================= DEV WEB =======================================
+  {
+    id: 4,
+    multiple: false,
+    title: "Formation Développement web",
+    description:
+      "Quel que soit votre niveau en programmation, vous pouvez commencer à créer des sites Web pour toute idée qui vous vient à l’esprit !  .",
+    goals: [
+      { id: 1, goal: "Structurer une page web en HTML." },
+      {
+        id: 2,
+        goal: "Organiser les éléments d’une page web grâce au CSS.",
+      },
+      { id: 3, goal: "Intégrer des formulaires dans une page web." },
+      { id: 4, goal: "Adapter une page pour les petites résolutions en CSS." },
+      {
+        id: 5,
+        goal: "Prendre une idée sur le Framework Bootstrap.",
+      },
+    ],
+    programme: [
+      {
+        id: 1,
+        description: "Séance 1 :",
+        items: [
+          { id: 1, description: "Un aperçu  sur le fonctionnement du Web" },
+          {
+            id: 2,
+            description:
+              "Une introduction aux notions fondamentales de la programmation",
+          },
+          { id: 3, description: "La structure d’un document HTML" },
+          { id: 4, description: "Introduction aux notions de balise " },
+          {
+            id: 5,
+            description:
+              "Insertion des titres, textes et listes dans une page web",
+          },
+          {
+            id: 6,
+            description: "Création des différents liens des programmes",
+          },
+          { id: 7, description: "Insertion d’images dans une page web" },
+          { id: 8, description: "Création de la première page web en HTML" },
+        ],
+      },
+      {
+        id: 2,
+        description: "Séance 2 :",
+        items: [
+          { id: 1, description: "Un aperçu sur le code CSS et son utilité" },
+          {
+            id: 2,
+            description:
+              "Les méthodes d’injection d’un code CSS dans un document HTML ",
+          },
+          {
+            id: 3,
+            description: "L’utilisation des sélecteurs et leurs importance",
+          },
+          {
+            id: 4,
+            description: "Formater un texte (couleur, style, police, taille…)",
+          },
+          {
+            id: 5,
+            description:
+              "Modifier le fond de la page avec des couleurs ou des images",
+          },
+        ],
+      },
+      {
+        id: 3,
+        description: "Séance 3 :",
+        items: [
+          {
+            id: 1,
+            description: "Positionnement des objets dans une page web ",
+          },
+          { id: 2, description: "Taille des objets (Width and Height)" },
+          { id: 3, description: "Les bordures, padding et margin" },
+          { id: 4, description: "Instruction avancée" },
+          { id: 5, description: "Créer des formulaires" },
+          { id: 6, description: "Structurer une page web en HTML de A à Z" },
+        ],
+      },
+      {
+        id: 4,
+        description: "Séance 4 : ",
+        items: [
+          { id: 1, description: "Mettre en forme la page web en CSS" },
+          { id: 2, description: "Corriger les pages Web de chaque étudiant" },
+          { id: 3, description: "Structurer une page web en HTML de A à Z" },
+          { id: 4, description: "Aperçu sur les Frameworks" },
+          {
+            id: 5,
+            description:
+              "Tester quelque fonctionnalités des Bootstraps (Mise en page réactive)",
+          },
+        ],
+      },
+    ],
+    details: [
+      { id: 1, description: "Durée 1 mois /  4 semaines" },
+      { id: 2, description: "3 heures (séance) par semaine " },
+      { id: 3, description: "Prix 9000 DA" },
+      {
+        id: 4,
+        description:
+          "Note : Le paiement est effectué le jour de la première session",
+        type: "note",
+      },
+    ],
+  },
+  // ============================= Digital Marketing =======================================
+  {
+    id: 4,
+    multiple: false,
+    title: "Formation Digital Marketing",
+    description:
+      "L’évolution du web et de ses pratiques obligent les entreprises à adopter de nouvelles stratégies dans le domaine du marketing. Maîtriser le web aujourd’hui, c’est avoir conscience de son potentiel marketing. A travers cette formation de marketing digital, appelée également marketing et communication digitale vous allez acquérir de nouvelles compétences et de savoir utiliser de nouveaux outils pour mieux vous faire connaître, conquérir, convertir, fidéliser les clients et vendre en ligne grâce à la formation marketing digital.",
+
+    programme: [
+      {
+        id: 1,
+        description: "Définir le marketing traditionnel et marketing digital.",
+      },
+      {
+        id: 2,
+        description:
+          "Définir la stratégie digitale sur le web et sur les réseaux sociaux.",
+      },
+      {
+        id: 3,
+        description:
+          "Connaître le rôle et les objectifs des sites web et des blog.",
+      },
+      { id: 4, description: "Apprendre à réaliser de la publicité en ligne." },
+      {
+        id: 5,
+        description: "Apprendre le marketing de contenu.",
+      },
+      {
+        id: 6,
+        description:
+          "Connaître les moteurs de recherche et le référencement SEO/SEA.",
+      },
+      {
+        id: 7,
+        description: "Se faire connaître localement.",
+      },
+      {
+        id: 8,
+        description: "Connaître les business models digital.",
+      },
+      {
+        id: 9,
+        description:
+          "Connaître le rôle de la vidéo et l’Emailing en marketing digital.",
+      },
+      {
+        id: 10,
+        description:
+          "Apprendre à réaliser l’analyse d’audience et des statistiques.",
+      },
+      {
+        id: 11,
+        description:
+          "Apprendre à utiliser les outils logiciels du digital marketer.",
+      },
+      {
+        id: 12,
+        goal: "Design et conception de la publicité.",
+        subtitles: [
+          "Infographie et graphisme",
+          "Charte graphique et visuel",
+          "Contenue visuel et sa caractérisation avec différentes reseaux sociaux",
+        ],
+      },
+    ],
+    details: [
+      { id: 1, description: "Durée 2.5 mois /  10 semaines" },
+      { id: 2, description: "3 heures (séance) par semaine " },
+      { id: 3, description: "Prix 9000 DA" },
+      {
+        id: 4,
+        description:
+          "Note : Le paiement est effectué le jour de la première session",
+        type: "note",
+      },
+    ],
+  },
 ];
 export default FORMATION_DETAILS;
