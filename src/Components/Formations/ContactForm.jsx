@@ -1,101 +1,165 @@
 import React, { useState } from "react";
 import "./contactForm.css";
 import InputField from "./InputField";
+import Textarea from "./Textarea";
 
 function ContactForm() {
-  const [formInputData, setFormInputData] = useState({});
+  const [formInputData, setFormInputData] = useState({
+    name: "",
+    lastname: "",
+    phone: "",
+    email: "",
+    password: "",
+    message: "",
+  });
+
   const handleFormInputChange = (e) => {
     const { name, value } = e.target;
     setFormInputData((prev) => ({ ...prev, [name]: value }));
   };
-  console.log(formInputData);
-  const inputFieldsData = [
-    {
-      tag: "input",
-      InameId: "name",
-      Ilabel: "Name: ",
-      Itype: "text",
-      Iwidth: "210px",
+
+  const validationSchema = {
+    name: {
+      validated: (value) => {
+        const nameRegEx = /^[a-zA-Z\-'. ]{2,30}$/;
+        return nameRegEx.test(value);
+      },
+      validationErrorMessage:
+        "Name should be 2-30 characters long, containing only letters, hyphens, apostrophes, or spaces.",
+      obligatory: true,
     },
-    {
-      tag: "input",
-      InameId: "lastname",
-      Ilabel: "Lastname: ",
-      Itype: "text",
-      Iwidth: "210px",
+    lastname: {
+      validated: (value) => {
+        const lastnameRegEx = /^[a-zA-Z\-'. ]{2,30}$/;
+        return lastnameRegEx.test(value);
+      },
+      validationErrorMessage:
+        "Last name should be 2-30 characters long, containing only letters, hyphens, apostrophes, or spaces.",
+      obligatory: true,
     },
-    {
-      tag: "input",
-      InameId: "email",
-      Ilabel: "Email: ",
-      Itype: "email",
-      Iwidth: "460px",
+    email: {
+      validated: (value) => {
+        const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailRegEx.test(value);
+      },
+      validationErrorMessage: "Please enter a valid email address",
+      obligatory: true,
     },
-    {
-      tag: "input",
-      InameId: "phone",
-      Ilabel: "Phone: ",
-      Itype: "phone",
-      Iwidth: "460px",
+    phone: {
+      validated: (value) => {
+        const phoneRegEx =
+          /^(?:\+?\d{1,3}[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
+        return phoneRegEx.test(value);
+      },
+      validationErrorMessage: "Please enter a valid phone number",
+      obligatory: true,
     },
-    {
-      tag: "input",
-      InameId: "password",
-      Ilabel: "Password: ",
-      Itype: "password",
-      Iwidth: "460px",
+    password: {
+      validated: (value) => {
+        const passwordRegEx = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+        return passwordRegEx.test(value);
+      },
+      validationErrorMessage:
+        "Password must be at least 8 characters long, containing at least one letter and one number",
+      obligatory: true,
     },
-    {
-      tag: "input",
-      InameId: "formation",
-      Ilabel: "Formation souhaitée: ",
-      Itype: "text",
-      Iwidth: "460px",
+    formation: {
+      validated: (value) => {
+        return true;
+      },
+      validationErrorMessage: "",
+      obligatory: true,
     },
-    {
-      tag: "textarea",
-      InameId: "message",
-      Ilabel: "Message: ",
-      Itype: "text",
-      Iwidth: "460px",
-      Iheight: "auto",
-      Irows: "4",
+    message: {
+      validated: (value) => {
+        return true;
+      },
+      validationErrorMessage: "",
+      obligatory: false,
     },
-  ];
+  };
+  // console.log("ErrorActivationNNN = ", validationSchema.name.ErrorActivation);
+
   return (
     <div className="contact-form-component">
       <div className="contact-form-container">
-        <div className="contact-form-wrapper">
-          <div className="name-lastname">
-            {inputFieldsData.slice(0, 2).map((data, index) => (
+        <form action="">
+          <div className="contact-form-wrapper">
+            <div className="name-lastname">
               <InputField
-                key={index}
-                tag={data.tag}
-                InameId={data.InameId}
-                Ilabel={data.Ilabel}
-                Itype={data.Itype}
-                Iwidth={data.Iwidth}
-                Iheight={data.Iheight}
-                Irows={data.Irows}
+                InameId={"name"}
+                Ilabel={"Name "}
+                Itype={"text"}
+                Iwidth={"210px"}
+                Iheight={"50px"}
                 handleFormInputChange={handleFormInputChange}
+                Validation={validationSchema.name}
+                value={formInputData.name}
               />
-            ))}
-          </div>
-          {inputFieldsData.slice(2).map((data, index) => (
+              <InputField
+                InameId={"lastname"}
+                Ilabel={"Lastame "}
+                Itype={"text"}
+                Iwidth={"210px"}
+                Iheight={"50px"}
+                handleFormInputChange={handleFormInputChange}
+                Validation={validationSchema.lastname}
+                value={formInputData.lastname}
+              />
+            </div>
             <InputField
-              key={index}
-              tag={data.tag}
-              InameId={data.InameId}
-              Ilabel={data.Ilabel}
-              Itype={data.Itype}
-              Iwidth={data.Iwidth}
-              Iheight={data.Iheight}
-              Irows={data.Irows}
+              InameId={"email"}
+              Ilabel={"Email "}
+              Itype={"email"}
+              Iwidth={"460px"}
+              Iheight={"50px"}
               handleFormInputChange={handleFormInputChange}
+              Validation={validationSchema.email}
+              value={formInputData.email}
             />
-          ))}
-        </div>
-        <button className="submit-button">Submit</button>
+            <InputField
+              InameId={"phone"}
+              Ilabel={"Phone "}
+              Itype={"text"}
+              Iwidth={"460px"}
+              Iheight={"50px"}
+              handleFormInputChange={handleFormInputChange}
+              Validation={validationSchema.phone}
+              value={formInputData.phone}
+            />
+            <InputField
+              InameId={"password"}
+              Ilabel={"Password "}
+              Itype={"password"}
+              Iwidth={"460px"}
+              Iheight={"50px"}
+              handleFormInputChange={handleFormInputChange}
+              Validation={validationSchema.password}
+              value={formInputData.password}
+            />
+            <InputField
+              InameId={"formation"}
+              Ilabel={"Formation "}
+              Itype={"text"}
+              Iwidth={"460px"}
+              Iheight={"50px"}
+              Validation={validationSchema.formation}
+              handleFormInputChange={handleFormInputChange}
+              value={formInputData.formation}
+            />
+            <Textarea
+              InameId={"message"}
+              Ilabel={"Message "}
+              Iwidth={"460px"}
+              Validation={validationSchema.message}
+              handleFormInputChange={handleFormInputChange}
+              value={formInputData.message}
+              Iheight={"auto"}
+              Irows={"4"}
+            />
+            <button className="submit-button">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
   );

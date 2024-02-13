@@ -14,9 +14,11 @@ import LevelsSection from "../FormationsDetails/LevelsSection";
 
 import ProgramSection from "../FormationsDetails/ProgramSection";
 import DetaillesDeLaFormation from "../FormationsDetails/DetaillesDeLaFormation";
+import PageNotFound from "./PageNotFound";
 
 function FormationDetails() {
   const { formation_name } = useParams();
+  // console.log("formation_name = ", formation_name);
   const [visibilityState, setVisibilityState] = useState({
     levels: {},
     programItems: {},
@@ -45,35 +47,41 @@ function FormationDetails() {
   };
   return (
     <div>
-      <Navbar />
-      <div className="formationDetails-container">
-        <div className="formationDetails-wrapper">
-          <NameDescriptionSection formationData={formationData} />
-          <GoalsSection formationData={formationData} />
-          {formationData.multiple && (
-            <LevelsSection
-              formationData={formationData}
-              handleLevelVisibilityTogle={handleLevelVisibilityTogle}
-              visibilityState={visibilityState}
-            />
-          )}
-          {!formationData.multiple && (
-            <>
-              <ProgramSection
-                formationData={formationData}
-                handleProgramVisibilityTogle={handleProgramVisibilityTogle}
-                visibilityState={visibilityState}
-              />
-              <DetaillesDeLaFormation
-                formationData={formationData}
-                handleProgramVisibilityTogle={handleProgramVisibilityTogle}
-                visibilityState={visibilityState}
-              />
-            </>
-          )}
+      {mapper[formation_name] == undefined ? (
+        <PageNotFound />
+      ) : (
+        <div>
+          <Navbar />
+          <div className="formationDetails-container">
+            <div className="formationDetails-wrapper">
+              <NameDescriptionSection formationData={formationData} />
+              <GoalsSection formationData={formationData} />
+              {formationData.multiple && (
+                <LevelsSection
+                  formationData={formationData}
+                  handleLevelVisibilityTogle={handleLevelVisibilityTogle}
+                  visibilityState={visibilityState}
+                />
+              )}
+              {!formationData.multiple && (
+                <>
+                  <ProgramSection
+                    formationData={formationData}
+                    handleProgramVisibilityTogle={handleProgramVisibilityTogle}
+                    visibilityState={visibilityState}
+                  />
+                  <DetaillesDeLaFormation
+                    formationData={formationData}
+                    handleProgramVisibilityTogle={handleProgramVisibilityTogle}
+                    visibilityState={visibilityState}
+                  />
+                </>
+              )}
+            </div>
+          </div>
+          <Footer />
         </div>
-      </div>
-      <Footer />
+      )}
     </div>
   );
 }

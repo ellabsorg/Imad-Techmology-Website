@@ -4,14 +4,14 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 .contact-form-wrapper {
   width: 500px;
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .name-lastname {

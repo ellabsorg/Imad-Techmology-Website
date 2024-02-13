@@ -16,9 +16,7 @@ function FormMapSection() {
           width="450"
           height="627"
           style={{ border: "0" }}
-          allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
     </div>

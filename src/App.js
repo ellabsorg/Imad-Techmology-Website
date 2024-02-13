@@ -5,6 +5,7 @@ import Products from "./Pages/Products";
 import Formations from "./Pages/Formations";
 import Apropos from "./Pages/Apropos";
 import FormationDetails from "../src/Components/shared/FormationDetails";
+import PageNotFound from "./Components/shared/PageNotFound";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             path="/formations/:formation_name"
             element={<FormationDetails />}
           />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
     </div>

@@ -7,7 +7,7 @@ import Contacts from "../Contacts";
 
 function Footer() {
   const navbarElements = [
-    { name: "Acceuil", path: "/acceuil" },
+    { name: "Acceuil", path: "/" },
     { name: "A propos", path: "/a-propos" },
     { name: "Formation", path: "/formations" },
     { name: "Produits", path: "/produits" },

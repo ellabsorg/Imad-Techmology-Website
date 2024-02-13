@@ -1,43 +1,37 @@
-import React, { useState } from "react";
+import React from "react";
 import "./inputField.css";
 
-function InputField({
+function Textarea({
   InameId,
   Ilabel,
-  Itype,
   Iwidth,
   Iheight,
+  Irows,
   handleFormInputChange,
   value,
   Validation,
 }) {
-  const [activateError, setActivateError] = useState(false);
-  const handleBlur = () => {
-    setActivateError(!Validation.validated(value) || false);
-  };
   return (
     <div className="input-field-container">
       <label id="label" htmlFor={InameId}>
         {Ilabel} {Validation?.obligatory && <span id="obligatory">*</span>}
       </label>
-      <input
-        onBlur={handleBlur}
+      <textarea
         onChange={(e) => {
           handleFormInputChange(e);
-          handleBlur();
         }}
-        type={Itype}
         name={InameId}
         id={InameId}
         value={value}
         className="input-field"
         style={{ width: Iwidth, height: Iheight }}
+        rows={Irows}
       />
-      {activateError && (
+      {!Validation?.validated(value) && (
         <p className="error-message">{Validation?.validationErrorMessage}</p>
       )}
     </div>
   );
 }
 
-export default InputField;
+export default Textarea;
