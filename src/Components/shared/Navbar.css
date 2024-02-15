@@ -49,3 +49,7 @@
   font-weight: 500;
   color: black;
 }
+.NavbarElement:hover {
+  font-weight: 600;
+  color: #09c699;
+}

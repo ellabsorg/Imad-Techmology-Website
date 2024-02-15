@@ -6,6 +6,8 @@ import Formations from "./Pages/Formations";
 import Apropos from "./Pages/Apropos";
 import FormationDetails from "../src/Components/shared/FormationDetails";
 import PageNotFound from "./Components/shared/PageNotFound";
+import Contact from "./Pages/Contact";
+import Evenement from "./Pages/Evenement";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
             path="/formations/:formation_name"
             element={<FormationDetails />}
           />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/evenement" element={<Evenement />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>

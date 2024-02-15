@@ -1,0 +1,129 @@
+.event-section-container {
+  color: white;
+  height: max-content;
+  width: 100vw;
+  margin: auto;
+  font-family: Kanit, sans-serif;
+}
+.event-section-wrapper {
+  margin: auto;
+  max-width: 1380px;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding-bottom: 40px;
+}
+.event-section-wrapper.flip {
+  flex-direction: row-reverse;
+}
+.event-right-side {
+  width: 400px;
+  height: 400px;
+}
+.event-left-side {
+  width: 600px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.event-info {
+  display: flex;
+  flex-direction: column;
+}
+.event-title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.event-date-location {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.date,
+.location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.event-date-location .FaIcon {
+  width: 20px;
+  height: 20px;
+  color: #09c699;
+  cursor: pointer;
+}
+.event-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.discover-button {
+  padding: 15px 40px;
+  border: 0;
+  border-radius: 100px;
+  background-color: black;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.2s;
+  -webkit-transition: all 0.3s;
+  border: 3px solid #09c699;
+  cursor: pointer;
+}
+
+.discover-button:hover {
+  background-color: #09c699;
+  transform: scale(1.1);
+}
+
+.discover-button:active {
+  background-color: #09c699;
+  transition: all 0.1s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+.event-discover-buttons {
+  padding: 20px 20px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.event-social-media {
+  display: flex;
+  gap: 20px;
+}
+
+.event-social-media .FaIcon {
+  width: 30px;
+  height: 30px;
+  color: #186dd3;
+  cursor: pointer;
+}
+.event-numbers {
+  padding: 15px 0px;
+  display: flex;
+  gap: 60px;
+}
+.event-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  padding: 10px 30px;
+  background-color: black;
+  border: 3px solid #09c699;
+  border-radius: 50px;
+}
+.event-stat .number {
+  font-weight: 600;
+  font-size: 25px;
+}

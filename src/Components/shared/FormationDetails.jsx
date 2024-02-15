@@ -45,6 +45,7 @@ function FormationDetails() {
       },
     }));
   };
+  console.log(mapper?.[formation_name])
   return (
     <div>
       {mapper[formation_name] == undefined ? (

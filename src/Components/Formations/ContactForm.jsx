@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./contactForm.css";
-import InputField from "./InputField";
-import Textarea from "./Textarea";
+import InputField from "../shared/InputField";
+import Textarea from "../shared/Textarea";
 
 function ContactForm() {
   const [formInputData, setFormInputData] = useState({
@@ -65,7 +65,8 @@ function ContactForm() {
     },
     formation: {
       validated: (value) => {
-        return true;
+        const formationRegEx = /^[a-zA-Z\-'. ]{2,30}$/;
+        return formationRegEx.test(value);
       },
       validationErrorMessage: "",
       obligatory: true,
@@ -79,87 +80,92 @@ function ContactForm() {
     },
   };
   // console.log("ErrorActivationNNN = ", validationSchema.name.ErrorActivation);
+  const FormVerification = () => {
+    return !Object.entries(validationSchema).some(
+      ([key, value]) => !value.validated(formInputData[key])
+    );
+  };
 
   return (
     <div className="contact-form-component">
       <div className="contact-form-container">
-        <form action="">
-          <div className="contact-form-wrapper">
-            <div className="name-lastname">
-              <InputField
-                InameId={"name"}
-                Ilabel={"Name "}
-                Itype={"text"}
-                Iwidth={"210px"}
-                Iheight={"50px"}
-                handleFormInputChange={handleFormInputChange}
-                Validation={validationSchema.name}
-                value={formInputData.name}
-              />
-              <InputField
-                InameId={"lastname"}
-                Ilabel={"Lastame "}
-                Itype={"text"}
-                Iwidth={"210px"}
-                Iheight={"50px"}
-                handleFormInputChange={handleFormInputChange}
-                Validation={validationSchema.lastname}
-                value={formInputData.lastname}
-              />
-            </div>
+        <div className="contact-form-wrapper">
+          <div className="name-lastname">
             <InputField
-              InameId={"email"}
-              Ilabel={"Email "}
-              Itype={"email"}
-              Iwidth={"460px"}
-              Iheight={"50px"}
-              handleFormInputChange={handleFormInputChange}
-              Validation={validationSchema.email}
-              value={formInputData.email}
-            />
-            <InputField
-              InameId={"phone"}
-              Ilabel={"Phone "}
+              InameId={"name"}
+              Ilabel={"Name "}
               Itype={"text"}
-              Iwidth={"460px"}
+              Iwidth={"210px"}
               Iheight={"50px"}
               handleFormInputChange={handleFormInputChange}
-              Validation={validationSchema.phone}
-              value={formInputData.phone}
+              Validation={validationSchema.name}
+              value={formInputData.name}
             />
             <InputField
-              InameId={"password"}
-              Ilabel={"Password "}
-              Itype={"password"}
-              Iwidth={"460px"}
-              Iheight={"50px"}
-              handleFormInputChange={handleFormInputChange}
-              Validation={validationSchema.password}
-              value={formInputData.password}
-            />
-            <InputField
-              InameId={"formation"}
-              Ilabel={"Formation "}
+              InameId={"lastname"}
+              Ilabel={"Lastame "}
               Itype={"text"}
-              Iwidth={"460px"}
+              Iwidth={"210px"}
               Iheight={"50px"}
-              Validation={validationSchema.formation}
               handleFormInputChange={handleFormInputChange}
-              value={formInputData.formation}
+              Validation={validationSchema.lastname}
+              value={formInputData.lastname}
             />
-            <Textarea
-              InameId={"message"}
-              Ilabel={"Message "}
-              Iwidth={"460px"}
-              Validation={validationSchema.message}
-              handleFormInputChange={handleFormInputChange}
-              value={formInputData.message}
-              Iheight={"auto"}
-              Irows={"4"}
-            />
-            <button className="submit-button">Submit</button>
           </div>
-        </form>
+          <InputField
+            InameId={"email"}
+            Ilabel={"Email "}
+            Itype={"email"}
+            Iwidth={"460px"}
+            Iheight={"50px"}
+            handleFormInputChange={handleFormInputChange}
+            Validation={validationSchema.email}
+            value={formInputData.email}
+          />
+          <InputField
+            InameId={"phone"}
+            Ilabel={"Phone "}
+            Itype={"text"}
+            Iwidth={"460px"}
+            Iheight={"50px"}
+            handleFormInputChange={handleFormInputChange}
+            Validation={validationSchema.phone}
+            value={formInputData.phone}
+          />
+          <InputField
+            InameId={"password"}
+            Ilabel={"Password "}
+            Itype={"password"}
+            Iwidth={"460px"}
+            Iheight={"50px"}
+            handleFormInputChange={handleFormInputChange}
+            Validation={validationSchema.password}
+            value={formInputData.password}
+          />
+          <InputField
+            InameId={"formation"}
+            Ilabel={"Formation "}
+            Itype={"text"}
+            Iwidth={"460px"}
+            Iheight={"50px"}
+            Validation={validationSchema.formation}
+            handleFormInputChange={handleFormInputChange}
+            value={formInputData.formation}
+          />
+          <Textarea
+            InameId={"message"}
+            Ilabel={"Message "}
+            Iwidth={"460px"}
+            Validation={validationSchema.message}
+            handleFormInputChange={handleFormInputChange}
+            value={formInputData.message}
+            Iheight={"auto"}
+            Irows={"4"}
+          />
+          <button className="submit-button" disabled={!FormVerification()}>
+            Submit
+          </button>
+        </div>
       </div>
     </div>
   );

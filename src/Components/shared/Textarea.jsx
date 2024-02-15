@@ -1,5 +1,4 @@
 import React from "react";
-import "./inputField.css";
 
 function Textarea({
   InameId,

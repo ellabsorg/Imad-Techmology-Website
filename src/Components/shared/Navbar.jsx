@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import Contacts from "../Contacts";
+import Contacts from "../../Pages/Contacts";
 
 function Navbar() {
   const navbarElements = [
@@ -9,7 +9,7 @@ function Navbar() {
     { name: "A propos", path: "/a-propos" },
     { name: "Formation", path: "/formations" },
     { name: "Produits", path: "/produits" },
-    { name: "Evenements", path: "/evenements" },
+    { name: "Evenements", path: "/evenement" },
     { name: "Contact", path: "/contact" },
   ];
   return (

@@ -3,8 +3,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  color: black;
+  color: rgb(255, 255, 255);
   gap: 0px;
+  /* background-color: red; */
+  max-width: 230px;
+  padding-bottom: 30px;
 }
 #label {
   font-family: Kanit, sams-serif;
@@ -24,8 +27,11 @@
   padding-left: 15px;
 }
 .error-message {
+  box-sizing: border-box;
+  /* background-color: aquamarine; */
+  width: 90%;
   color: red;
-  padding: 0%;
+  padding-bottom: 30px;
   margin: 0%;
 }
 #obligatory {

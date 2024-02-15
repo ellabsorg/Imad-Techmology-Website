@@ -12,19 +12,16 @@ function InputField({
   Validation,
 }) {
   const [activateError, setActivateError] = useState(false);
-  const handleBlur = () => {
-    setActivateError(!Validation.validated(value) || false);
-  };
   return (
     <div className="input-field-container">
       <label id="label" htmlFor={InameId}>
         {Ilabel} {Validation?.obligatory && <span id="obligatory">*</span>}
       </label>
       <input
-        onBlur={handleBlur}
+        onBlur={() => setActivateError(true)}
         onChange={(e) => {
           handleFormInputChange(e);
-          handleBlur();
+          setActivateError(true);
         }}
         type={Itype}
         name={InameId}
@@ -33,7 +30,7 @@ function InputField({
         className="input-field"
         style={{ width: Iwidth, height: Iheight }}
       />
-      {activateError && (
+      {activateError && !Validation.validated(value) && (
         <p className="error-message">{Validation?.validationErrorMessage}</p>
       )}
     </div>

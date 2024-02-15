@@ -1,0 +1,21 @@
+.select-option-component {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: rgb(255, 255, 255);
+  gap: 0px;
+  padding-bottom: 20px;
+}
+
+.select,
+.option {
+  width: 480px;
+  height: 60px;
+  color: rgb(0, 0, 0);
+  font-family: Kanit, sams-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 15px;
+}
