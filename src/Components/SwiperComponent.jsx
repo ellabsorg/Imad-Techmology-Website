@@ -26,9 +26,6 @@ function SwiperComponent() {
       }}
     >
       <SwiperSlide>
-        <img src={EllabsLogo} alt="" className="PartnersSliderItem" />
-      </SwiperSlide>
-      <SwiperSlide>
         <img src={SonatrachLogo} alt="" className="PartnersSliderItem" />
       </SwiperSlide>
       <SwiperSlide>
@@ -44,7 +41,7 @@ function SwiperComponent() {
         <img src={LondonShopLogo} alt="" className="PartnersSliderItem" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={EllabsLogo} alt="" className="PartnersSliderItem" />
+        <img src={SonatrachLogo} alt="" className="PartnersSliderItem" />
       </SwiperSlide>
 
       <div className="swiper-button-next"></div>
