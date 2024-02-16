@@ -1,11 +1,10 @@
 import React from "react";
 import "./eventSection.css";
-import LORGIF from "../../Assets/league-Robotics-algeria.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarDays as faCalendarDays } from "@fortawesome/free-solid-svg-icons";
-import { faLocationDot as faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook as faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram as faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 
 function EventSection({ eventData }) {

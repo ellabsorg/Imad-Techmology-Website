@@ -1,6 +1,5 @@
 import React from "react";
 import "./GallerySwiper.css";
-import image from "../../Assets/Photo-Mobbo-1.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,

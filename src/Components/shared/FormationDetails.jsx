@@ -48,7 +48,7 @@ function FormationDetails() {
   console.log(mapper?.[formation_name])
   return (
     <div>
-      {mapper[formation_name] == undefined ? (
+      {mapper[formation_name] === undefined ? (
         <PageNotFound />
       ) : (
         <div>

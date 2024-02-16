@@ -1,6 +1,5 @@
 import React from "react";
 // Importing Partner Pictures
-import EllabsLogo from "../Assets/Artboard 4.png";
 import SonatrachLogo from "../Assets/sonatrach.png";
 import HuaweiLogo from "../Assets/huawei-logo.png";
 import USTHBLogo from "../Assets/USTHB.png";

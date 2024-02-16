@@ -11,6 +11,7 @@ function MapSection() {
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
+        title="Google Maps"
       ></iframe>
     </section>
   );

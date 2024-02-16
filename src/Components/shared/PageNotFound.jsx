@@ -1,7 +1,6 @@
 import React from "react";
 import "./pageNotFound.css";
 import { Link } from "react-router-dom";
-import { Button } from "@material-ui/core";
 import NotFoundImage from "../../Assets/Page-not-found.png";
 function PageNotFound() {
   return (
