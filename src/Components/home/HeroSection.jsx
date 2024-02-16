@@ -17,7 +17,7 @@ function HeroSection() {
         </div>
         <div className="three-buttons">
           <div className="formations three-buttons-item">
-            <Link className="three-buttons-item-link" to={"/formation"}>
+            <Link className="three-buttons-item-link" to={"/formations"}>
               <FontAwesomeIcon
                 size="2x"
                 className="FaIcon"
@@ -39,7 +39,7 @@ function HeroSection() {
             </Link>
           </div>
           <div className="evenements three-buttons-item">
-            <Link className="three-buttons-item-link" to={"/evenements"}>
+            <Link className="three-buttons-item-link" to={"/evenement"}>
               <FontAwesomeIcon
                 size="2x"
                 className="FaIcon"

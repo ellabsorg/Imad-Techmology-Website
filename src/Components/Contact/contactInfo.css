@@ -4,7 +4,7 @@
   justify-content: flex-start;
   gap: 20px;
   color: white;
-  border-bottom: 2px dotted white;
+  border-bottom: 2px dashed white;
   text-align: left;
 }
 .contact-info-wrapper .contact-div h3 {

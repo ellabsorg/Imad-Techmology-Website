@@ -143,7 +143,7 @@ function ContactForm() {
           />
           <InputField
             InameId={"formation"}
-            Ilabel={"Formation "}
+            Ilabel={"Formation souhaitée  "}
             Itype={"text"}
             Iwidth={"460px"}
             Iheight={"50px"}
