@@ -79,7 +79,6 @@ function ContactForm() {
       obligatory: false,
     },
   };
-  // console.log("ErrorActivationNNN = ", validationSchema.name.ErrorActivation);
   const FormVerification = () => {
     return !Object.entries(validationSchema).some(
       ([key, value]) => !value.validated(formInputData[key])

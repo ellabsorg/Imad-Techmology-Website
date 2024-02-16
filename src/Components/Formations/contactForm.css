@@ -22,10 +22,11 @@
 .submit-button {
   background-color: #09cd99;
   font-family: Kanit, sams-serif;
+  border-radius: 25px;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   width: 120px;
-  height: 45px;
+  height: 55px;
+  margin-bottom: 30px;
 }
-

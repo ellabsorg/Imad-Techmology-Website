@@ -3,6 +3,30 @@
   gap: 20px;
 }
 
-
-
-
+.contacts-submit-button {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background-color: #09c699;
+}
+.contacts-submit-button:hover {
+  scale: 1.1;
+  background-position: 100% 0;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.contacts-submit-button:focus {
+  outline: none;
+}

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./contactForm.css";
-
 import InputField from "../shared/InputField";
 import Textarea from "../shared/Textarea";
 import SelectOption from "./SelectOption";
@@ -60,6 +59,11 @@ function ContactForm() {
     setFormInputData((prev) => ({ ...prev, [name]: value }));
   };
   console.log("FORM DATA = ", formInputData);
+  const FormVerification = () => {
+    return !Object.entries(validationSchema).some(
+      ([key, value]) => !value.validated(formInputData[key])
+    );
+  };
   return (
     <div>
       <SelectOption handleFormInputChange={handleFormInputChange} />
@@ -105,6 +109,10 @@ function ContactForm() {
         Iheight={"auto"}
         Irows={"8"}
       />
+
+      <button className="submit-button" disabled={!FormVerification()}>
+        Submit
+      </button>
     </div>
   );
 }
